@@ -883,6 +883,288 @@
     }
 
     /* ══════════════════════════════════════════
+       DESIGN SYSTEM
+    ══════════════════════════════════════════ */
+    #design-system {
+      background: var(--parchment2);
+      border-top: 3px solid var(--brown);
+      border-bottom: 3px solid var(--brown);
+    }
+
+    .ds-shot-grid {
+      margin-top: 0.95rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .ds-shot {
+      border: 3px solid var(--brown);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--cream-light);
+      box-shadow: 4px 4px 0 var(--tan);
+    }
+
+    .ds-shot-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .ds-shot img {
+      width: 100%;
+      height: auto;
+      max-height: 540px;
+      object-fit: contain;
+      display: block;
+      border-bottom: 2px solid var(--brown);
+      background: #f0e1bf;
+    }
+
+    .ds-shot figcaption {
+      font-family: var(--mono);
+      font-size: 0.53rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      padding: 0.5rem 0.65rem;
+      background: var(--parchment);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .ds-shot-open {
+      color: var(--terra);
+      border: 1.5px solid var(--terra);
+      border-radius: 4px;
+      padding: 0.18rem 0.45rem;
+      font-size: 0.5rem;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    .ds-other-tab {
+      margin-top: 1.2rem;
+      border: 3px solid var(--brown);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--cream-light);
+      box-shadow: 4px 4px 0 var(--tan);
+    }
+
+    .ds-other-tab summary {
+      list-style: none;
+      cursor: pointer;
+      background: var(--brown);
+      color: var(--parchment);
+      padding: 0.7rem 0.95rem;
+      border-bottom: 2px solid var(--brown2);
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+
+    .ds-other-tab summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .ds-other-tab summary::after {
+      content: '+';
+      font-size: 0.8rem;
+      line-height: 1;
+      color: var(--amber);
+    }
+
+    .ds-other-tab[open] summary::after {
+      content: '-';
+    }
+
+    .ds-other-content {
+      padding: 0.95rem;
+      background: var(--parchment);
+    }
+
+    .ds-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .ds-card {
+      border: 3px solid var(--brown);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--cream-light);
+      box-shadow: 4px 4px 0 var(--tan);
+    }
+
+    .ds-card-head {
+      background: var(--brown);
+      color: var(--parchment);
+      padding: 0.7rem 0.95rem;
+      border-bottom: 2px solid var(--brown2);
+      font-family: var(--mono);
+      font-size: 0.56rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .ds-card-body {
+      padding: 1rem;
+    }
+
+    .ds-swatches {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.55rem;
+    }
+
+    .ds-swatch {
+      border: 2px solid var(--parchment2);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--parchment);
+    }
+
+    .ds-tone {
+      height: 56px;
+    }
+
+    .ds-meta {
+      padding: 0.45rem 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.5rem;
+      color: var(--text-mid);
+      letter-spacing: 0.03em;
+      line-height: 1.45;
+    }
+
+    .ds-type {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .ds-type-display {
+      font-family: var(--display);
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      line-height: 1.1;
+      color: var(--brown);
+    }
+
+    .ds-type-body {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+
+    .ds-type-mono {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--terra);
+      border: 1.5px solid rgba(200, 74, 40, 0.35);
+      width: fit-content;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .ds-spacing {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .ds-space-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--mono);
+      font-size: 0.52rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-soft);
+    }
+
+    .ds-space-bar {
+      height: 8px;
+      border-radius: 99px;
+      background: var(--terra);
+    }
+
+    .ds-components {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .ds-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 5px;
+      padding: 0.55rem 0.9rem;
+      border: 2px solid;
+      background: transparent;
+      color: inherit;
+      cursor: default;
+    }
+
+    .ds-btn-primary {
+      color: var(--cream);
+      background: var(--terra);
+      border-color: var(--terra2);
+    }
+
+    .ds-btn-secondary {
+      color: var(--blue2);
+      background: rgba(77, 111, 163, 0.08);
+      border-color: var(--blue);
+    }
+
+    .ds-chip {
+      font-family: var(--mono);
+      font-size: 0.52rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1.5px solid var(--amber2);
+      color: var(--amber2);
+      background: rgba(212, 150, 58, 0.08);
+      border-radius: 99px;
+      padding: 0.24rem 0.6rem;
+    }
+
+    .ds-field {
+      width: min(100%, 240px);
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--brown);
+      background: var(--parchment);
+      border: 2px solid var(--parchment2);
+      border-radius: 5px;
+      padding: 0.5rem 0.65rem;
+    }
+
+    /* ══════════════════════════════════════════
        PROJETOS — Browser-window cards
     ══════════════════════════════════════════ */
     #projetos {
@@ -1666,6 +1948,14 @@
         gap: 3rem;
       }
 
+      .ds-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ds-shot-grid {
+        grid-template-columns: 1fr;
+      }
+
       .about-portrait-browser {
         max-width: 320px;
       }
@@ -1732,6 +2022,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#sobre">About</a></li>
+      <li><a href="#design-system">System</a></li>
       <li><a href="#projetos">Projects</a></li>
       <li><a href="#experiencias">Journey</a></li>
       <li><a href="#contato" class="nav-cta">Contact →</a></li>
@@ -1916,11 +2207,147 @@
     </div>
   </section>
 
+  <!-- ═══ DESIGN SYSTEM ═══════════════════════════════ -->
+  <section id="design-system" class="sec">
+    <div class="sec-inner">
+      <span class="sec-eyebrow ey-brown reveal">II — Design System</span>
+      <h2 class="sec-title reveal rv1" style="color:var(--brown)">
+        Building consistent<br><em style="color:var(--terra)">visual language</em>
+      </h2>
+      <p class="about-body reveal rv2" style="max-width:760px;margin-top:1rem">
+        A mini snapshot of my UI foundation: reusable tokens and components to keep screens coherent, scalable, and
+        implementation-ready.
+      </p>
+
+      <div class="ds-grid">
+        <article class="ds-card reveal rv1">
+          <div class="ds-card-head">Color Tokens</div>
+          <div class="ds-card-body">
+            <div class="ds-swatches">
+              <div class="ds-swatch">
+                <div class="ds-tone" style="background:var(--terra)"></div>
+                <div class="ds-meta">--terra<br>#C84A28</div>
+              </div>
+              <div class="ds-swatch">
+                <div class="ds-tone" style="background:var(--amber)"></div>
+                <div class="ds-meta">--amber<br>#D4963A</div>
+              </div>
+              <div class="ds-swatch">
+                <div class="ds-tone" style="background:var(--blue)"></div>
+                <div class="ds-meta">--blue<br>#4D6FA3</div>
+              </div>
+              <div class="ds-swatch">
+                <div class="ds-tone" style="background:var(--brown)"></div>
+                <div class="ds-meta">--brown<br>#2C1A0A</div>
+              </div>
+              <div class="ds-swatch">
+                <div class="ds-tone" style="background:var(--parchment)"></div>
+                <div class="ds-meta">--parchment<br>#F5E8CC</div>
+              </div>
+              <div class="ds-swatch">
+                <div class="ds-tone" style="background:var(--cream-light)"></div>
+                <div class="ds-meta">--cream-light<br>#FFFDF5</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ds-card reveal rv2">
+          <div class="ds-card-head">Typography</div>
+          <div class="ds-card-body ds-type">
+            <p class="ds-type-display">Design that feels intentional.</p>
+            <p class="ds-type-body">Body text uses Inter for readability and rhythm, while display titles use
+              DM Serif Display to create a premium, editorial tone.</p>
+            <span class="ds-type-mono">SPACE MONO FOR LABELS / MICROCOPY</span>
+          </div>
+        </article>
+
+        <article class="ds-card reveal rv2">
+          <div class="ds-card-head">Spacing Scale</div>
+          <div class="ds-card-body ds-spacing">
+            <div class="ds-space-row">
+              <span>4px</span>
+              <div class="ds-space-bar" style="width:16%"></div>
+            </div>
+            <div class="ds-space-row">
+              <span>8px</span>
+              <div class="ds-space-bar" style="width:28%;background:var(--amber)"></div>
+            </div>
+            <div class="ds-space-row">
+              <span>16px</span>
+              <div class="ds-space-bar" style="width:44%;background:var(--blue)"></div>
+            </div>
+            <div class="ds-space-row">
+              <span>24px</span>
+              <div class="ds-space-bar" style="width:60%;background:var(--terra2)"></div>
+            </div>
+            <div class="ds-space-row">
+              <span>32px</span>
+              <div class="ds-space-bar" style="width:78%;background:var(--brown3)"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ds-card reveal rv3">
+          <div class="ds-card-head">Components</div>
+          <div class="ds-card-body ds-components">
+            <button class="ds-btn ds-btn-primary" type="button">Primary</button>
+            <button class="ds-btn ds-btn-secondary" type="button">Secondary</button>
+            <span class="ds-chip">Status · Active</span>
+            <input class="ds-field" type="text" value="Input component" aria-label="Design system input" readonly />
+          </div>
+        </article>
+      </div>
+
+      <details class="ds-other-tab reveal rv4">
+        <summary>Other Designers</summary>
+        <div class="ds-other-content">
+          <div class="ds-shot-grid">
+            <figure class="ds-shot">
+              <a class="ds-shot-link" href="design_system_minimalista_branco (1).png" target="_blank"
+                rel="noopener noreferrer" aria-label="Abrir design system final em tamanho real">
+                <img src="design_system_minimalista_branco (1).png" alt="Design system minimalista em fundo branco"
+                  loading="lazy" />
+              </a>
+              <figcaption>
+                Joias
+                <span class="ds-shot-open">Abrir imagem</span>
+              </figcaption>
+            </figure>
+
+            <figure class="ds-shot">
+              <a class="ds-shot-link" href="design_system_brinquedos_clean.png" target="_blank"
+                rel="noopener noreferrer" aria-label="Abrir design system de brinquedos em tamanho real">
+                <img src="design_system_brinquedos_clean.png" alt="Design system do projeto Brinquedos"
+                  loading="lazy" />
+              </a>
+              <figcaption>
+                Brinquedos
+                <span class="ds-shot-open">Abrir imagem</span>
+              </figcaption>
+            </figure>
+
+            <figure class="ds-shot">
+              <a class="ds-shot-link" href="design_system_esportes_final.png" target="_blank" rel="noopener noreferrer"
+                aria-label="Abrir design system de esportes em tamanho real">
+                <img src="design_system_esportes_final.png" alt="Design system do projeto Esportes" loading="lazy" />
+              </a>
+              <figcaption>
+                Esportes · Tokens and UI
+                <span class="ds-shot-open">Abrir imagem</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
   <!-- ═══ PROJETOS ══════════════════════════════════════ -->
   <section id="projetos">
     <div class="proj-top reveal">
       <div>
-        <span class="sec-eyebrow ey-amber">II — Projects</span>
+        <span class="sec-eyebrow ey-amber">III — Projects</span>
         <h2 class="sec-title" style="color:var(--parchment)">Featured <em
             style="color:var(--amber);font-style:italic">cases</em></h2>
       </div>
@@ -2292,7 +2719,7 @@
   <section id="experiencias" class="sec">
     <div class="sec-inner">
       <div style="margin-bottom:3.5rem">
-        <span class="sec-eyebrow ey-terra reveal">III — Journey</span>
+        <span class="sec-eyebrow ey-terra reveal">IV — Journey</span>
         <h2 class="sec-title reveal rv1" style="color:var(--brown)">
           Where I learned<br><em style="color:var(--terra)">to grow</em>
         </h2>
@@ -2373,7 +2800,7 @@
   <section id="contato" class="sec">
     <div class="sec-inner">
       <div style="margin-bottom:3.5rem">
-        <span class="sec-eyebrow ey-amber reveal">IV — Contact</span>
+        <span class="sec-eyebrow ey-amber reveal">V — Contact</span>
         <h2 class="sec-title reveal rv1" style="color:var(--parchment)">Let's create<br><em
             style="color:var(--terra);font-style:italic">something together</em></h2>
       </div>
